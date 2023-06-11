@@ -1,0 +1,22 @@
+# image
+tqdm
+pillow
+numpy
+torch
+scikit-image
+Wand
+opencv-python
+scipy
+torch
+torchvision
+
+# text
+git+https://github.com/PrithivirajDamodaran/Styleformer.git
+pandas
+transformers
+nltk
+textflint
+styleformer
+#gender_bender
+sacremoses
+sentence-transformers
