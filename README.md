@@ -23,9 +23,12 @@ pip install -r requirements.txt
 ### Corrupting Image Datasets
 ```bash
 cd image_corruption
+
+# METHOD_NAME: the corruption method name, e.g., gaussian_noise
+# FOLDER_PATH_TO_IMAGE_DATA: the path to the image data folder
 python corruption.py \
-  --method METHOD_NAME \
-  --image_root_folder FOLDER_PATH_TO_IMAGE_DATA \
+  --method ${METHOD_NAME} \
+  --image_root_folder ${FOLDER_PATH_TO_IMAGE_DATA} \
   --severity_begin 1 \
   --severity_end 5 \
   --batch_size 100 \
@@ -34,11 +37,15 @@ python corruption.py \
 ### Corrupting Text Datasets
 ```bash
 cd text_corruption
+# TASK_NAME: the task name, e.g., vqa
+# SPLIT_NAME: the split name, e.g., train
+# CORRUPTION_CATEGORY: the corruption category, e.g., change_char
+# CORRUPTION_METHOD: the corruption method, e.g., ocr
 python corruption.py \
-  --task TASK_NAME \
-  --split SPLIT_NAME \
-  --corruption_category CORRUPTION_CATEGORY \
-  --corruption_method CORRUPTION_METHOD \
+  --task ${TASK_NAME} \
+  --split ${SPLIT_NAME} \
+  --corruption_category ${CORRUPTION_CATEGORY} \
+  --corruption_method ${CORRUPTION_METHOD} \
   --severity_begin 1 \
   --severity_end 5 \
 
