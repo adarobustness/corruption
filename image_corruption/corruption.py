@@ -50,19 +50,6 @@ def corrupt_a_folder():
     )
 
 
-def directly_corrupt_images():
-    BASE_PATH = "/zhome/stud/chensh/robustness/VL_adapter/datasets/nlvr/images_test/"
-    # BASE_PATH = "/data/engs-tvg/oxfd1618/robustness_research/adapter_robustness/VL_adapter/datasets/nlvr/images_test/"
-    img_file = "test1-101-0-img0.png"
-    corrupt_images(
-        image_paths=[os.path.join(BASE_PATH, img_file)],
-        method="blank_image",
-        save_path="./",
-        severity=100,
-    )
-
 
 if __name__ == "__main__":
     corrupt_a_folder()
-
-    # directly_corrupt_images()

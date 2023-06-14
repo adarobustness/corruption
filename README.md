@@ -33,6 +33,10 @@ python corruption.py \
   --severity_end 5 \
   --batch_size 100 \
   --num_workers 10
+
+# Examples 
+python corruption.py --method gaussian_noise --image_root_folder /path/to/image/data --severity_begin 1 --severity_end 5
+
 ```
 ### Corrupting Text Datasets
 ```bash
@@ -49,6 +53,9 @@ python corruption.py \
   --severity_begin 1 \
   --severity_end 5 \
 
+# Examples 
+python corruption.py --task gqa --split testdev --corruption_category none --corruption_method swap_syn_word_emb --severity_begin 1 --severity_end 4
+python corruption.py --task gqa --split testdev --corruption_category change_char --severity_begin 1 --severity_end 4
 ```
 ## Acknowledgement
 This repo is built based on the following repos:

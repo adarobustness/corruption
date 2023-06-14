@@ -56,20 +56,11 @@ from corruption_methods import (
     back_trans_corruption,
     random_word_swap_corruption,
 )
-HOST_NAME = socket.gethostname()
+
+# Modify this to point to the location of the datasets on your machine.
+DATASET_BASE = "/home/.data/datasets"
 
 logger = logging.getLogger(__name__)
-
-
-
-if "htc" in HOST_NAME:
-    DATASET_BASE = "/data/engs-tvg/oxfd1618/robustness_research/adapter_robustness/VL_adapter/datasets/"
-elif "plunder" in HOST_NAME:
-    DATASET_BASE = "/nfs/data3/chensh/robustness/VL_adapter/datasets/"
-elif "mcml" in HOST_NAME:
-    DATASET_BASE = "/dss/dsshome1/00/di93zun/robustness/VL_adapter/datasets/"
-else:
-    raise ValueError(f"HOST_NAME = {HOST_NAME} is not valid!")
 
 
 ALL_METHOD_MAP = {
