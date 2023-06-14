@@ -36,8 +36,14 @@ python corruption.py \
 
 # Examples 
 python corruption.py --method gaussian_noise --image_root_folder /path/to/image/data --severity_begin 1 --severity_end 5
-
 ```
+
+- `image_corruption/corrupt_image.sh` is a script to corrupt images for NLVR2 and one can modify the path for other datasets 
+```bash
+cd image_corruption
+nohup bash corrupt_image.sh > corrupt_image.log 2>&1
+```
+
 ### Corrupting Text Datasets
 ```bash
 cd text_corruption
@@ -57,6 +63,13 @@ python corruption.py \
 python corruption.py --task gqa --split testdev --corruption_category none --corruption_method swap_syn_word_emb --severity_begin 1 --severity_end 4
 python corruption.py --task gqa --split testdev --corruption_category change_char --severity_begin 1 --severity_end 4
 ```
+
+- `text_corruption/corrupt_text.sh` is a script to corrupt text for all task datasets. 
+```bash
+cd text_corruption
+nohup bash corrupt_text.sh > corrupt_text.log 2>&1
+```
+
 ## Acknowledgement
 This repo is built based on the following repos:
 - [ImageNet-C](https://github.com/hendrycks/robustness)
